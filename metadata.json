@@ -1,0 +1,8 @@
+{
+  "name": "Ecclesiabranx Agency",
+  "description": "A premium futuristic marketing agency website inspired by Zajno, featuring smooth animations, cinematic transitions, and a dark luxury aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
