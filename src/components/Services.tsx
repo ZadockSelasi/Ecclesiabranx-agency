@@ -4,7 +4,7 @@ import {
   Layers, 
   Megaphone, 
   Building2, 
-  MonitorSmartphone, 
+  Briefcase, 
   Sparkles, 
   Printer, 
   Rocket
@@ -32,9 +32,9 @@ const services = [
     items: ['Company Registration', 'Business Name Registration', 'Startup Documentation', 'Legal Setup Assistance', 'Business Consultation']
   },
   {
-    icon: MonitorSmartphone,
-    title: 'Website & Dev',
-    items: ['Modern Business Websites', 'Portfolio Websites', 'E-commerce Websites', 'Landing Pages', 'Responsive UI/UX']
+    icon: Briefcase,
+    title: 'Business Consultancy',
+    items: ['Business Strategy', 'Market Analysis', 'Operations Consulting', 'Financial Advisory', 'Risk Management']
   },
   {
     icon: Sparkles,

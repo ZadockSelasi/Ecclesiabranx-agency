@@ -4,27 +4,19 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Veloz Shop',
-    category: 'E-Commerce / UI/UX',
-    image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=2000',
+    image: '/work-1.jpeg',
     color: 'from-orange-500/20 to-red-500/20'
   },
   {
-    title: 'Ecclesiabranx',
-    category: 'Agency Branding',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000',
+    image: '/work-2.jpeg',
     color: 'from-brand-blue/20 to-brand-purple/20'
   },
   {
-    title: 'Hostel Matrix',
-    category: 'Management System',
-    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=2000',
+    image: '/work-3.jpeg',
     color: 'from-emerald-500/20 to-teal-500/20'
   },
   {
-    title: 'EdTech Pro',
-    category: 'Education Platform',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=2000',
+    image: '/work-4.jpeg',
     color: 'from-blue-500/20 to-indigo-500/20'
   }
 ];
@@ -67,7 +59,7 @@ export function Portfolio() {
           {projects.map((project, index) => {
             return (
               <motion.div 
-                key={project.title}
+                key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -85,16 +77,10 @@ export function Portfolio() {
                 <div className={`absolute inset-0 bg-gradient-to-tr ${project.color} mix-blend-overlay z-10`} />
                 
                 {/* Content Overlay */}
-                <div className="absolute bottom-6 left-6 right-6 z-20 flex flex-col items-start text-left">
-                  <span className="px-2 py-1 bg-brand-blue text-white text-[8px] uppercase tracking-widest rounded-sm font-mono mb-3">
-                    {project.category}
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-emerald-950 mb-2 group-hover:-translate-y-1 transition-transform duration-300">
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center gap-2 group-hover:-translate-y-1 transition-transform duration-300 delay-75">
-                    <span className="text-xs text-emerald-950/60">Explore Case Study</span>
-                    <ArrowUpRight className="w-4 h-4 text-emerald-950/60 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                <div className="absolute inset-0 p-6 z-20 flex flex-col justify-end items-start text-left">
+                  <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-3 rounded-full shadow-lg group-hover:-translate-y-2 group-hover:bg-white transition-all duration-300">
+                    <span className="text-sm font-medium text-emerald-950">Explore Case Study</span>
+                    <ArrowUpRight className="w-4 h-4 text-emerald-950 transition-transform duration-300 group-hover:rotate-45" />
                   </div>
                 </div>
               </motion.div>

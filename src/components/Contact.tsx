@@ -1,15 +1,13 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 // Since TikTok and WhatsApp are not in standard Lucide gracefully without specialized icons, we'll use text or generic replacements. Or custom SVG.
 // Assuming lucide-react has some, or we can use text.
 
 export function Contact() {
   const socials = [
-    { name: 'Instagram', label: 'IG' },
-    { name: 'TikTok', label: 'TK' },
-    { name: 'LinkedIn', label: 'IN' },
-    { name: 'Facebook', label: 'FB' },
-    { name: 'WhatsApp', label: 'WA' },
+    { name: 'Instagram', label: 'IG', link: 'https://www.instagram.com/eccl.esiabranx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
+    { name: 'TikTok', label: 'TK', link: '#' },
+    { name: 'WhatsApp', label: 'WA', link: 'https://whatsapp.com/channel/0029VbBlenaA2pL79M9CIn3D' },
   ];
 
   return (
@@ -66,7 +64,9 @@ export function Contact() {
                 {socials.map((platform, idx) => (
                   <a 
                     key={idx} 
-                    href="#" 
+                    href={platform.link} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={platform.name}
                     className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center text-sm text-white/60 hover:text-white hover:border-brand-blue hover:bg-brand-blue/10 hover:shadow-[0_0_20px_rgba(37,99,235,0.2)] transition-all duration-500 font-mono tracking-wider cursor-hover backdrop-blur-sm"
                   >
@@ -133,7 +133,7 @@ export function Contact() {
                   <option value="" className="bg-[#050505] text-white">Select a service...</option>
                   <option value="branding" className="bg-[#050505] text-white">Brand Identity</option>
                   <option value="digital-marketing" className="bg-[#050505] text-white">Digital Marketing</option>
-                  <option value="web-dev" className="bg-[#050505] text-white">Website Design & Dev</option>
+                  <option value="business-consultancy" className="bg-[#050505] text-white">Business Consultancy</option>
                   <option value="business-setup" className="bg-[#050505] text-white">Business Registration</option>
                   <option value="other" className="bg-[#050505] text-white">Other</option>
                 </select>
