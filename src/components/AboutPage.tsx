@@ -2,15 +2,15 @@ import { motion } from 'motion/react';
 import { ArrowRight, Lightbulb, TrendingUp, ShieldCheck, Target, Zap, Globe, Linkedin, Twitter } from 'lucide-react';
 
 const teamMembers = [
-  { name: "Nana Kwame Appiah", role: "Co-Founder", desc: "Recognized for influential leadership and strategic vision, driving market positioning.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" },
-  { name: "Zadock Selasi", role: "Founder", desc: "Passionate about technology and innovation. Engineers scalable digital experiences.", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" },
-  { name: "Ama Dufie Winnifred", role: "CEO", desc: "Guiding the company's vision and ensuring sustainable growth in African markets.", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" },
-  { name: "Daniel Danso", role: "Design Head", desc: "Crafting visually compelling identities that elevate brands globally.", img: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&q=80&w=400" },
-  { name: "Stephen", role: "Designer", desc: "Translating complex ideas into intuitive and elegant design solutions.", img: "https://images.unsplash.com/photo-1531123897727-8f129e1b4dce?auto=format&fit=crop&q=80&w=400" },
-  { name: "Padmond", role: "Marketing Head", desc: "Developing data-driven strategies to maximize brand reach and ROI.", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400" },
-  { name: "Princess Awuah", role: "Marketer", desc: "Executing high-impact marketing campaigns across diverse platforms.", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" },
-  { name: "Abigail Akorfa", role: "Marketer", desc: "Connecting with audiences through authentic and engagement-focused marketing.", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400" },
-  { name: "Nhyira Kwartengmaa", role: "Financial Lead & Secretary", desc: "Ensuring financial prudence and operational compliance across the agency.", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400" }
+  { name: "Nana Kwame Appiah", role: "Co-Founder", desc: "Recognized for influential leadership and strategic vision, driving market positioning.", img: "/Nana Kwame Appiah.jpeg" },
+  { name: "Zadock Selasi", role: "Founder", desc: "Passionate about technology and innovation. Engineers scalable digital experiences.", img: "/Zadock Selasi.jpeg" },
+  { name: "Ama Dufie Winnifred", role: "CEO", desc: "Guiding the company's vision and ensuring sustainable growth in African markets.", img: "/Ama Dufie Winnifred.jpeg" },
+  { name: "Daniel Danso", role: "Design Head", desc: "Crafting visually compelling identities that elevate brands globally.", img: "/Daniel Danso.jpeg" },
+  { name: "Stephen", role: "Designer", desc: "Translating complex ideas into intuitive and elegant design solutions.", img: "/Stephen.jpeg" },
+  { name: "Padmond", role: "Marketing Head", desc: "Developing data-driven strategies to maximize brand reach and ROI.", img: "/Padmond.jpeg" },
+  { name: "Princess Awuah", role: "Marketer", desc: "Executing high-impact marketing campaigns across diverse platforms.", img: "/Princess Awuah.jpeg" },
+  { name: "Abigail Akorfa", role: "Marketer", desc: "Connecting with audiences through authentic and engagement-focused marketing.", img: "/Abigail Akorfa.jpeg" },
+  { name: "Nhyira Kwartengmaa", role: "Financial Lead & Secretary", desc: "Ensuring financial prudence and operational compliance across the agency.", img: "/Nhyira Kwartengmaa.jpeg" }
 ];
 
 const OVERLAY_VARIANTS = {
@@ -31,9 +31,9 @@ export function AboutPage() {
     <div className="pt-24 bg-brand-dark min-h-screen text-emerald-950">
       
       {/* Hero Section */}
-      <section className="relative py-32 px-6 md:px-12 bg-[#050505] text-white overflow-hidden min-h-[60vh] flex flex-col justify-center">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/5 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-blue/20 rounded-full blur-[120px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
+      <section className="relative py-32 px-6 md:px-12 bg-brand-dark text-emerald-950 overflow-hidden min-h-[60vh] flex flex-col justify-center">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-purple/10 via-brand-dark to-brand-dark pointer-events-none" />
+        <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-[120px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
         
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <motion.div
@@ -45,7 +45,7 @@ export function AboutPage() {
             <motion.h1 variants={OVERLAY_VARIANTS} className="text-5xl md:text-7xl font-display font-bold leading-tight tracking-tight mb-6">
               About <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-purple">Ecclesiabranx</span>
             </motion.h1>
-            <motion.p variants={OVERLAY_VARIANTS} className="text-xl text-white/70 font-light leading-relaxed">
+            <motion.p variants={OVERLAY_VARIANTS} className="text-xl text-emerald-950/70 font-light leading-relaxed">
               Building African businesses through creativity, innovation, and strategic engineering. We transform visionary ideas into globally competitive realities.
             </motion.p>
           </motion.div>
@@ -141,15 +141,15 @@ export function AboutPage() {
       </section>
 
       {/* Team Collage & Members Section */}
-      <section className="py-24 px-6 md:px-12 bg-[#050505] text-white relative overflow-hidden">
-        {/* Soft glowing background similar to the image's blur transition but adapted to dark mode */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-gradient-to-r from-brand-blue/20 via-brand-purple/20 to-emerald-500/20 blur-[100px] pointer-events-none" />
+      <section className="py-24 px-6 md:px-12 bg-white text-emerald-950 relative overflow-hidden">
+        {/* Soft glowing background similar to the image's blur transition but adapted for light mode */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-gradient-to-r from-brand-blue/10 via-brand-purple/10 to-emerald-500/10 blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Creative Collage */}
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-5xl md:text-6xl font-display font-bold mb-6">Meet our Team</h2>
-            <p className="text-xl text-white/50 font-light">
+            <p className="text-xl text-emerald-950/70 font-light">
               A diverse team of passionate professionals with unique skills driving innovation and excellence in every project.
             </p>
           </div>
@@ -208,7 +208,7 @@ export function AboutPage() {
           {/* Detailed Team Grid */}
           <div className="text-center max-w-3xl mx-auto mb-16 pt-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">The Ecclesiabranx Team</h2>
-            <p className="text-lg text-white/50 font-light">
+            <p className="text-lg text-emerald-950/70 font-light">
               A diverse group of passionate professionals, each bringing unique skills and experiences to drive innovation and excellence in every project we undertake.
             </p>
           </div>
@@ -221,24 +221,24 @@ export function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex flex-col bg-white/5 border border-white/10 p-6 rounded-3xl hover:bg-white/10 transition-colors"
+                className="flex flex-col bg-emerald-50/50 border border-emerald-950/10 p-6 rounded-3xl hover:bg-emerald-50 transition-colors"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mb-5 border border-white/10 p-1">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mb-5 border border-emerald-950/10 p-1">
                   <div className="w-full h-full rounded-full overflow-hidden">
                     <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                 </div>
-                <h4 className="text-xl font-bold mb-1 text-white">{member.name}</h4>
+                <h4 className="text-xl font-bold mb-1 text-emerald-950">{member.name}</h4>
                 <p className="text-xs font-mono tracking-wider text-brand-blue mb-4 uppercase">{member.role}</p>
-                <p className="text-sm text-white/50 font-light leading-relaxed mb-6 flex-grow">{member.desc}</p>
+                <p className="text-sm text-emerald-950/60 font-light leading-relaxed mb-6 flex-grow">{member.desc}</p>
                 <div className="flex gap-4">
-                  <a href="#" className="text-white/30 hover:text-white transition-colors">
+                  <a href="#" className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
                     <Linkedin className="w-4 h-4" />
                   </a>
-                  <a href="#" className="text-white/30 hover:text-white transition-colors">
+                  <a href="#" className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
                     <Twitter className="w-4 h-4" />
                   </a>
-                  <a href="#" className="text-white/30 hover:text-white transition-colors">
+                  <a href="#" className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
                     <Globe className="w-4 h-4" />
                   </a>
                 </div>
