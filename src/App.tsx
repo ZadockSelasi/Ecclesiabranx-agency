@@ -217,7 +217,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="relative min-h-screen bg-brand-dark text-emerald-950 font-sans selection:bg-brand-purple/30">
+      <div className="relative min-h-screen bg-brand-dark text-emerald-950 font-sans selection:bg-brand-purple/30 overflow-x-hidden w-full max-w-[100vw]">
         <AnimatePresence>
           {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
         </AnimatePresence>

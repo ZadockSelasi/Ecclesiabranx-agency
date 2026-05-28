@@ -27,7 +27,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0 bg-[radial-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:40px_40px] [mask-image:linear-gradient(to_bottom,black,transparent_80%)] opacity-50" />
 
       {/* Content */}
-      <div className="relative z-10 w-full px-8 md:px-16 lg:px-32 flex flex-col items-start text-left mt-20 max-w-7xl">
+      <div className="relative z-10 w-full px-6 sm:px-8 md:px-16 lg:px-32 flex flex-col items-start text-left mt-20 max-w-7xl">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-6xl md:text-[80px] lg:text-[140px] xl:text-[180px] font-display font-bold tracking-tighter leading-[0.85] mb-6 -ml-1 md:-ml-2"
+          className="text-[3.5rem] leading-[1] sm:text-6xl md:text-[80px] lg:text-[110px] xl:text-[130px] font-display font-bold tracking-tighter sm:leading-[0.85] mb-6 -ml-1 md:-ml-2"
         >
           Building Brands.<br />
           Designing <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-purple">Future.</span>

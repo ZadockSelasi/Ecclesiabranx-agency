@@ -160,13 +160,13 @@ export function AboutPage() {
              <div className="flex flex-col gap-4 md:gap-8 translate-y-8">
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-                 className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
+                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
                >
                  <img src={teamMembers[0].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-                 className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
+                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
                >
                  <img src={teamMembers[4].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
@@ -176,13 +176,13 @@ export function AboutPage() {
              <div className="flex flex-col gap-4 md:gap-8 -translate-y-8">
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
-                 className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden self-center"
+                 className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full overflow-hidden self-center"
                >
                  <img src={teamMembers[2].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
-                 className="w-40 h-56 md:w-56 md:h-72 rounded-[100px] overflow-hidden self-center"
+                 className="w-28 h-40 sm:w-40 sm:h-56 md:w-56 md:h-72 rounded-[100px] overflow-hidden self-center"
                >
                  <img src={teamMembers[3].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
@@ -192,13 +192,13 @@ export function AboutPage() {
              <div className="flex flex-col gap-4 md:gap-8 translate-y-12">
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
-                 className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
+                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
                >
                  <img src={teamMembers[1].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}
-                 className="w-32 h-48 md:w-48 md:h-64 rounded-[100px] overflow-hidden"
+                 className="w-24 h-32 sm:w-32 sm:h-48 md:w-48 md:h-64 rounded-[100px] overflow-hidden"
                >
                  <img src={teamMembers[5].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
@@ -213,7 +213,7 @@ export function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
             {teamMembers.map((member, idx) => (
               <motion.div 
                 key={idx}
