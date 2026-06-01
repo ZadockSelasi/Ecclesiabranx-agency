@@ -216,7 +216,7 @@ export default function App() {
   const [showSplash, setShowSplash] = useState(true);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <div className="relative min-h-screen bg-brand-dark text-emerald-950 font-sans selection:bg-brand-purple/30 overflow-x-hidden w-full max-w-[100vw]">
         <AnimatePresence>
           {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}

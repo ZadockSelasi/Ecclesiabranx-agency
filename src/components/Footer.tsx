@@ -22,7 +22,7 @@ export function Footer() {
         </div>
 
         <div>
-          &copy; 2024 Ecclesiabranx. All rights reserved.
+          &copy; {currentYear} Ecclesiabranx. All rights reserved.
         </div>
       </div>
     </footer>

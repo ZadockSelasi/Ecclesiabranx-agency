@@ -103,7 +103,7 @@ export function Contact() {
               const subject = encodeURIComponent(`New Inquiry from ${fullName}`);
               const body = encodeURIComponent(`Name: ${fullName}\nCompany: ${businessName || 'N/A'}\nEmail: ${email}\nService Required: ${service}\n\nMessage:\n${message}`);
               
-              window.location.href = `mailto:zadockselasi7@gmail.com?subject=${subject}&body=${body}`;
+              window.location.href = `mailto:ecclesiabranx@gmail.com?subject=${subject}&body=${body}`;
               e.currentTarget.reset();
             }}
           >
@@ -166,7 +166,7 @@ export function Contact() {
 
             <button type="submit" className="group/btn mt-8 w-full md:w-auto self-start flex items-center justify-center bg-white text-black px-10 py-5 rounded-full font-medium hover:bg-brand-blue hover:text-white hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-500 cursor-hover relative overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">
-                Start Your Brand Journey
+                Start Project
                 <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
               </span>
             </button>
