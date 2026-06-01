@@ -41,7 +41,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-[3.5rem] leading-[1] sm:text-6xl md:text-[80px] lg:text-[110px] xl:text-[130px] font-display font-bold tracking-tighter sm:leading-[0.85] mb-6 -ml-1 md:-ml-2"
+          className="text-4xl min-[400px]:text-5xl sm:text-[3.5rem] leading-[1.1] sm:leading-[1] md:text-[80px] lg:text-[110px] xl:text-[130px] font-display font-bold tracking-tighter sm:tracking-[-0.02em] mb-6 -ml-1 md:-ml-2"
         >
           Building Brands.<br />
           Designing <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-purple">Future.</span>

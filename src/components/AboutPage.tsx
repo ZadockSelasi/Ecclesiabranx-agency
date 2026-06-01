@@ -1,14 +1,14 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Lightbulb, TrendingUp, ShieldCheck, Target, Zap, Globe, Linkedin, Twitter } from 'lucide-react';
+import { ArrowRight, Lightbulb, TrendingUp, ShieldCheck, Target, Zap, Globe, Linkedin, Instagram } from 'lucide-react';
 
 const teamMembers = [
   { name: "Nana Kwame Appiah", role: "Co-Founder", desc: "Recognized for influential leadership and strategic vision, driving market positioning.", img: "/Nana Kwame Appiah.jpeg" },
   { name: "Zadock Selasi", role: "Founder", desc: "Passionate about technology and innovation. Engineers scalable digital experiences.", img: "/Zadock Selasi.jpeg" },
-  { name: "Ama Dufie Winnifred", role: "CEO", desc: "Guiding the company's vision and ensuring sustainable growth in African markets.", img: "/Ama Dufie Winnifred.jpeg" },
+  { name: "Sarpong Winifred", role: "CEO", desc: "Guiding the company's vision and ensuring sustainable growth in African markets.", img: "/Sarpong Winifred.jpeg", instagram: "https://www.instagram.com/wiiiin_iiii", linkedin: "https://www.linkedin.com/in/winifred-sarpong-5a2a3040b?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
   { name: "Daniel Danso", role: "Design Head", desc: "Crafting visually compelling identities that elevate brands globally.", img: "/Daniel Danso.jpeg" },
   { name: "Stephen", role: "Designer", desc: "Translating complex ideas into intuitive and elegant design solutions.", img: "/Stephen.jpeg" },
   { name: "Padmond", role: "Marketing Head", desc: "Developing data-driven strategies to maximize brand reach and ROI.", img: "/Padmond.jpeg" },
-  { name: "Princess Awuah", role: "Marketer", desc: "Executing high-impact marketing campaigns across diverse platforms.", img: "/Princess Awuah.jpeg" },
+  { name: "Princess Awuah", role: "Marketer", desc: "Executing high-impact marketing campaigns across diverse platforms.", img: "/Princess Awuah.jpeg", instagram: "https://www.instagram.com/_quinncarsley_?utm_source=qr", linkedin: "https://www.linkedin.com/in/princess-obeng-846472300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
   { name: "Abigail Akorfa", role: "Marketer", desc: "Connecting with audiences through authentic and engagement-focused marketing.", img: "/Abigail Akorfa.jpeg" },
   { name: "Nhyira Kwartengmaa", role: "Financial Lead & Secretary", desc: "Ensuring financial prudence and operational compliance across the agency.", img: "/Nhyira Kwartengmaa.jpeg" }
 ];
@@ -42,8 +42,9 @@ export function AboutPage() {
             variants={STAGGER_CONTAINER}
             className="max-w-3xl"
           >
-            <motion.h1 variants={OVERLAY_VARIANTS} className="text-5xl md:text-7xl font-display font-bold leading-tight tracking-tight mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-purple">Ecclesiabranx</span>
+             <motion.h1 variants={OVERLAY_VARIANTS} className="text-4xl min-[400px]:text-5xl md:text-7xl font-display font-bold leading-tight tracking-tight mb-6">
+              About <br className="min-[400px]:hidden" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-purple break-words">Ecclesiabranx</span>
             </motion.h1>
             <motion.p variants={OVERLAY_VARIANTS} className="text-xl text-emerald-950/70 font-light leading-relaxed">
               Building African businesses through creativity, innovation, and strategic engineering. We transform visionary ideas into globally competitive realities.
@@ -155,50 +156,50 @@ export function AboutPage() {
           </div>
 
           {/* Collage Grid */}
-          <div className="flex justify-center items-center gap-4 md:gap-8 mb-32 max-w-5xl mx-auto pt-8 pb-16">
+          <div className="flex justify-center items-center gap-2 min-[400px]:gap-4 md:gap-8 mb-20 md:mb-32 max-w-5xl mx-auto pt-8 pb-16">
              {/* Left Column */}
-             <div className="flex flex-col gap-4 md:gap-8 translate-y-8">
+             <div className="flex flex-col gap-2 min-[400px]:gap-4 md:gap-8 translate-y-4 md:translate-y-8">
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
+                 className="w-16 h-16 min-[400px]:w-20 min-[400px]:h-20 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
                >
                  <img src={teamMembers[0].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
+                 className="w-16 h-16 min-[400px]:w-20 min-[400px]:h-20 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
                >
                  <img src={teamMembers[4].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
              </div>
 
              {/* Middle Column */}
-             <div className="flex flex-col gap-4 md:gap-8 -translate-y-8">
+             <div className="flex flex-col gap-2 min-[400px]:gap-4 md:gap-8 -translate-y-4 md:-translate-y-8">
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
-                 className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full overflow-hidden self-center"
+                 className="w-20 h-20 min-[400px]:w-24 min-[400px]:h-24 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full overflow-hidden self-center"
                >
                  <img src={teamMembers[2].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
-                 className="w-28 h-40 sm:w-40 sm:h-56 md:w-56 md:h-72 rounded-[100px] overflow-hidden self-center"
+                 className="w-20 h-28 min-[400px]:w-24 min-[400px]:h-32 sm:w-40 sm:h-56 md:w-56 md:h-72 rounded-[100px] overflow-hidden self-center"
                >
                  <img src={teamMembers[3].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
              </div>
 
              {/* Right Column */}
-             <div className="flex flex-col gap-4 md:gap-8 translate-y-12">
+             <div className="flex flex-col gap-2 min-[400px]:gap-4 md:gap-8 translate-y-8 md:translate-y-12">
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
-                 className="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
+                 className="w-16 h-16 min-[400px]:w-20 min-[400px]:h-20 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full overflow-hidden"
                >
                  <img src={teamMembers[1].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
                <motion.div 
                  initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}
-                 className="w-24 h-32 sm:w-32 sm:h-48 md:w-48 md:h-64 rounded-[100px] overflow-hidden"
+                 className="w-16 h-20 min-[400px]:w-20 min-[400px]:h-28 sm:w-32 sm:h-48 md:w-48 md:h-64 rounded-[100px] overflow-hidden"
                >
                  <img src={teamMembers[5].img} alt="" className="w-full h-full object-cover" />
                </motion.div>
@@ -232,14 +233,11 @@ export function AboutPage() {
                 <p className="text-xs font-mono tracking-wider text-brand-blue mb-4 uppercase">{member.role}</p>
                 <p className="text-sm text-emerald-950/60 font-light leading-relaxed mb-6 flex-grow">{member.desc}</p>
                 <div className="flex gap-4">
-                  <a href="#" className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
+                  <a href={member.instagram || "#"} target={member.instagram ? "_blank" : undefined} rel={member.instagram ? "noopener noreferrer" : undefined} className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a href={member.linkedin || "#"} target={member.linkedin ? "_blank" : undefined} rel={member.linkedin ? "noopener noreferrer" : undefined} className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
                     <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a href="#" className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                  <a href="#" className="text-emerald-950/40 hover:text-emerald-950 transition-colors">
-                    <Globe className="w-4 h-4" />
                   </a>
                 </div>
               </motion.div>

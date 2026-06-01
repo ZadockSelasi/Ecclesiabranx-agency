@@ -90,10 +90,20 @@ export function Contact() {
           <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-white/[0.01] rounded-[2rem] border border-white/5 backdrop-blur-2xl pointer-events-none" />
           
           <form 
-            className="relative p-8 md:p-12 flex flex-col gap-8 z-10"
+            className="relative p-6 sm:p-8 md:p-12 flex flex-col gap-6 sm:gap-8 z-10"
             onSubmit={(e) => {
               e.preventDefault();
-              alert("Thank you for reaching out! We'll get back to you soon.");
+              const formData = new FormData(e.currentTarget);
+              const fullName = formData.get('fullName');
+              const businessName = formData.get('businessName');
+              const email = formData.get('email');
+              const service = formData.get('service');
+              const message = formData.get('message');
+              
+              const subject = encodeURIComponent(`New Inquiry from ${fullName}`);
+              const body = encodeURIComponent(`Name: ${fullName}\nCompany: ${businessName || 'N/A'}\nEmail: ${email}\nService Required: ${service}\n\nMessage:\n${message}`);
+              
+              window.location.href = `mailto:zadockselasi7@gmail.com?subject=${subject}&body=${body}`;
               e.currentTarget.reset();
             }}
           >
@@ -102,6 +112,7 @@ export function Contact() {
                 <label className="text-xs font-mono text-white/40 uppercase tracking-[0.15em] group-focus-within/input:text-brand-blue transition-colors">Full Name</label>
                 <input 
                   type="text" 
+                  name="fullName"
                   required
                   placeholder="John Doe"
                   className="bg-transparent border-b border-white/10 py-3 text-lg text-white placeholder:text-white/20 focus:outline-none focus:border-brand-blue transition-all cursor-hover"
@@ -111,6 +122,7 @@ export function Contact() {
                 <label className="text-xs font-mono text-white/40 uppercase tracking-[0.15em] group-focus-within/input:text-brand-blue transition-colors">Business Name</label>
                 <input 
                   type="text" 
+                  name="businessName"
                   placeholder="Your Company"
                   className="bg-transparent border-b border-white/10 py-3 text-lg text-white placeholder:text-white/20 focus:outline-none focus:border-brand-blue transition-all cursor-hover"
                 />
@@ -122,6 +134,7 @@ export function Contact() {
                 <label className="text-xs font-mono text-white/40 uppercase tracking-[0.15em] group-focus-within/input:text-brand-blue transition-colors">Email Address</label>
                 <input 
                   type="email" 
+                  name="email"
                   required
                   placeholder="john@company.com"
                   className="bg-transparent border-b border-white/10 py-3 text-lg text-white placeholder:text-white/20 focus:outline-none focus:border-brand-blue transition-all cursor-hover"
@@ -129,7 +142,7 @@ export function Contact() {
               </div>
               <div className="flex flex-col gap-3 group/input">
                 <label className="text-xs font-mono text-white/40 uppercase tracking-[0.15em] group-focus-within/input:text-brand-blue transition-colors">Service Needed</label>
-                <select required className="bg-transparent border-b border-white/10 py-3 text-lg text-white/60 focus:text-white focus:outline-none focus:border-brand-blue transition-all cursor-hover appearance-none">
+                <select name="service" required className="bg-transparent border-b border-white/10 py-3 text-lg text-white/60 focus:text-white focus:outline-none focus:border-brand-blue transition-all cursor-hover appearance-none">
                   <option value="" className="bg-[#050505] text-white">Select a service...</option>
                   <option value="branding" className="bg-[#050505] text-white">Brand Identity</option>
                   <option value="digital-marketing" className="bg-[#050505] text-white">Digital Marketing</option>
@@ -143,6 +156,7 @@ export function Contact() {
             <div className="flex flex-col gap-3 group/input mt-4">
               <label className="text-xs font-mono text-white/40 uppercase tracking-[0.15em] group-focus-within/input:text-brand-blue transition-colors">Message</label>
               <textarea 
+                name="message"
                 required
                 placeholder="Tell us about the project you want to build..."
                 rows={4}

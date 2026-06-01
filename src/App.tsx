@@ -8,7 +8,7 @@ import { CustomCursor } from './components/CustomCursor';
 import { AboutPage } from './components/AboutPage';
 import { motion, useScroll, useSpring, AnimatePresence } from 'motion/react';
 import { Menu } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 
 function SplashScreen({ onComplete }: { onComplete: () => void }) {
